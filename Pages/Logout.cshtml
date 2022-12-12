@@ -1,0 +1,19 @@
+﻿@page
+@model LoginApp.Pages.LogoutModel
+@{
+    ViewData["Title"] = "logout";
+}
+
+<form method="post">
+    <div class="containr mt-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+                <p>Are you sure want to logout from the app?</p>
+                <p class="justify-content-center">
+                    <button class="btn btn-danger" asp-page-handler="Logout">Yes</button>
+                    <button class="btn btn-success mx-5" asp-page-handler="NoLogout">No</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</form>

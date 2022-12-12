@@ -1,0 +1,42 @@
+﻿@page
+@model IndexModel
+@{
+}
+<h1 class="text-center display-4">Welcome to Contact App</h1>
+<br />
+<div class="d-flex justify-content-between align-items-center">
+    <h3>List of User</h3>
+    <div class="p-2">
+        <a class="btn btn-primary btn-sm p-2" href='/Users/Create'>New User</a>
+    </div>
+</div>
+<table class="table table-responsive-xxl" ">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listContact){
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.Address</td>
+            <td>
+                <div class="py-1">
+                    <a class="btn btn-primary btn-sm" href="/Users/Edit?id=@item.Id">Edit</a>
+                </div>
+                <div class="py-1">
+                    <a class="btn btn-danger btn-sm" href="/Users/Delete?id=@item.Id">Delete</a>
+                </div>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
