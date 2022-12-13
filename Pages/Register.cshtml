@@ -9,7 +9,7 @@
        <div class="col-sm-12 col-md-12 col-lg-4">
             <h1 class="mb-3">Register</h1>
             
-            <form method="post">
+            <form method="post" name="register">
                 <div asp-validation-summary="All" class="text-danger">
 
                 </div>
@@ -20,12 +20,12 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label" asp-for="Model.Password">Password</label>
-                    <input type="password" asp-for="Model.Password" class="form-control" />
+                    <input type="password" asp-for="Model.Password" class="form-control"/>
                     <span asp-validation-for="Model.Password" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" asp-for="Model.ConfirmPassword">Confirm Password</label>
-                    <input type="password" asp-for="Model.ConfirmPassword" class="form-control" />
+                    <input type="password" asp-for="Model.ConfirmPassword" class="form-control"/>
                     <span asp-validation-for="Model.ConfirmPassword" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
